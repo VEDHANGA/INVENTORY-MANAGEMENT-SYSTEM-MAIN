@@ -1,76 +1,54 @@
-Inventory Management Web Application
-Why this test?
-      This test evaluates your understanding of web applications, which is essential for any new engineer building applications for the web. Flask is chosen as the framework because it is simple, well-written, and easy to learn in a few hours. If you are new to web applications, this test also helps assess your aptitude for learning web application development.
+Inventory Management System
+A simple and efficient Flask-based Inventory Management System that helps manage products, locations, and product movements — all through a clean, modern dashboard interface.
 
-Project Goal
-    Create a web application using the Flask framework to manage the inventory of products across different warehouses or locations. The intended use is in a shop or warehouse environment to track various products and their locations.
+This system allows you to:
 
-Functionalities and Database Design
-Database Tables
-  Product: productid (Primary Key, varchar)
+✅ Add, edit, and delete products
 
-  Location: locationid (Primary Key, varchar)
+✅ Manage locations
 
-  ProductMovement: movementid, timestamp, fromlocation, tolocation, productid, qty
+✅ Track movements between locations
 
-Notes:
+Features
+Dashboard
 
-  Primary keys are text (varchar).
+Product Management – Add, edit, and remove inventory items.
 
-  Either fromlocation or tolocation (or both) can be blank:
+Location Management – Manage multiple storage or warehouse locations.
 
-  If moving products into a location, fromlocation is blank.
+Product Movements – Track product transfers between locations.
 
-  If moving products out of a location, tolocation is blank.
+Report Page – Summarizes all movements and current stock levels.
 
-Views to Implement:
-  Add/Edit Product
+Sidebar Navigation – Toggle sidebar for smooth navigation between pages.
 
-  Add/Edit Location
+Tech Stack
+Backend: Flask (Python)
 
-  Add/Edit ProductMovement
+Database: SQLite (inventory.db)
 
-Report showing product balance quantity in each location
+Frontend: HTML5, CSS3 (Bootstrap 5)
 
-Use Cases
-  Create 3-4 products
+ORM: SQLAlchemy
 
-  Create 3-4 locations
+Project Structure:
+            Inventory Management System/
+            ├── app.py                # Main Flask application
+            ├── inventory.db          # SQLite database file
+            ├── static/
+            │   └── style.css         # Custom CSS for UI
+            ├── templates/
+            │   ├── base.html         # Common layout for all pages
+            │   ├── products.html     # Manage products
+            │   ├── locations.html    # Manage locations
+            │   ├── movements.html    # Track movements
+            │   └── report.html       # View reports
+            └── README.md             # Project documentation
+How It Works
+Products Page: Add and manage product details such as name, quantity, and type.
 
-  Make product movements such as:
+Locations Page: Store warehouse or outlet details.
 
-  Move Product A to Location X
+Movements Page: Track stock transfers between locations.
 
-  Move Product B to Location X
-
-  Move Product A from Location X to Location Y
-
-  Repeat to make about 20 such movements
-
-  View product balance in each location in a grid with columns for Product, Warehouse, and Quantity
-
-How to Submit
-  When the application is ready, push your code to GitHub.
-
-  Add a README.md file to your repository.
-
-  Include screenshots showing the UI screens and reports.
-
-  Send an email to the requesting engineer or at hraerele.in notifying that your project is done.
-
-Next Steps
-  The evaluators will contact you for a walkthrough of your code.
-
-  They may request additional features or changes to evaluate your understanding.
-
-Tips to Ace
-  Build a clean, user-friendly UI with well-organized forms and reports.
-
-  Write concise SQL queries if not using an ORM.
-
-  Avoid code duplication by abstracting reusable functions.
-
-Caution
-  Do not copy the test from other sources; understand and implement it yourself.
-
-  It is acceptable to ask for help or research online but do the project yourself to build a sustainable programming career
+Reports: Get a summarized view of current inventory.
