@@ -1,6 +1,4 @@
 Inventory Management Web Application
-
-
 Why this test?
       This test evaluates your understanding of web applications, which is essential for any new engineer building applications for the web. Flask is chosen as the framework because it is simple, well-written, and easy to learn in a few hours. If you are new to web applications, this test also helps assess your aptitude for learning web application development.
 
